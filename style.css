@@ -1,0 +1,28 @@
+
+html, body {
+    font-family: "Karantina", system-ui;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    direction: rtl;
+    color: rgb(0, 0, 0);
+    background-image: url(../assets/lomdat_pinkas/orangeBackground.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.heading{
+ text-align: center;
+ font-size: 8vh;
+ position: absolute;
+ left: 20vw;
+ top:25vh;
+
+}
+.full-screen {
+    position: absolute;
+    z-index: 1;
+    height: 100%;
+    width: 100vw;
+}
