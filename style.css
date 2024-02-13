@@ -7,7 +7,7 @@ html, body {
     padding: 0;
     direction: rtl;
     color: rgb(0, 0, 0);
-    background-image: url(assets\lomdat_pinkas\orangeBackground.jpg);
+    background-image: url(orangeBackground.jpg);
     background-size: 100% 100%;
     background-repeat: no-repeat;
     overflow: hidden;
