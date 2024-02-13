@@ -56,3 +56,22 @@ html, body {
     max-width: 100vw; /* Maximum width of 100% of the viewport width */
     max-height: 50vh; /* Maximum height of 50% of the viewport height */
 }
+
+.hand {
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 11vh;
+    max-width: 30%; /* Ensure image doesn't exceed viewport width */
+    max-height: 20vh; /* Ensure image doesn't exceed 80% of the viewport height */
+}
+.hand-text {
+
+    position: fixed;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 9vh;
+    font-size: 5vw;
+}
+
+
