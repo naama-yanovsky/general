@@ -1,17 +1,10 @@
-
-//loading function:
-window.addEventListener('load', function() {
-    document.getElementById('full-screen').addEventListener('click', handleAnimation);
-    
-});
-
-//intial animation function
+// Initial animation function
 const handleAnimation = (parameters) => {
 
     var hand = document.getElementById('hand');
     hand.style.display = 'none';
 
-    //the logos animations
+    // The logos animations
     var logo = document.getElementById('logo');
     logo.style.animation = 'ani 4s ';
     var logo2 = document.getElementById('logo2');
@@ -23,7 +16,14 @@ const handleAnimation = (parameters) => {
         logo.style.display = 'none';
         logo2.style.display = 'none';
         heading.style.display = 'none'; 
-    }, 3500); // 5000 milliseconds = 5 seconds
+        document.getElementById('lesson-menu').style.visibility = "visible";
+        document.body.style.overflow = "auto";
+    }, 3500);
+
 };
 
 
+// Loading function
+window.addEventListener('load', function() {
+    document.getElementById('full-screen').addEventListener('click', handleAnimation);
+});

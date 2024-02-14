@@ -9,8 +9,7 @@ html, body {
     color: rgb(0, 0, 0);
     background-image: url(orangeBackground.jpg);
     background-size: 100% 100%;
-    background-repeat: no-repeat;
-    overflow: hidden;
+    overflow: auto;
 }
 
 .heading{
@@ -19,7 +18,6 @@ html, body {
  background-size: 100% 100%;
     color: rgb(0, 0, 0);
     font-weight: 800;
-    text-align: center;
     margin-top: 40vw;
     font-size: 13vw;
     height: 15vw;
@@ -80,3 +78,20 @@ html, body {
     50%  {  top:50vh;}
     100% { top:-100vh;}
   }
+
+  .lesson-menu{
+   visibility: hidden;
+  }
+
+  .title {
+    text-align: center;
+    margin-top: 15vw;
+    position: relative;
+    width: 80%; /* 20% of the viewport width */
+    height: 20vh; /* Automatically adjust height to maintain aspect ratio */
+    max-width: 100vw; /* Maximum width of 100% of the viewport width */
+    max-height: 50vh; /* Maximum height of 50% of the viewport height */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
