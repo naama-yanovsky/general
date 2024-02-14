@@ -75,3 +75,8 @@ html, body {
 }
 
 
+@keyframes ani {
+    0%   {  top:0vh;}
+    50%  {  top:50vh;}
+    100% { top:-100vh;}
+  }
