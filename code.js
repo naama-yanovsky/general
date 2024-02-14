@@ -1,6 +1,5 @@
 // Initial animation function
 const handleAnimation = (parameters) => {
-
     var hand = document.getElementById('hand');
     hand.style.display = 'none';
 
@@ -18,10 +17,9 @@ const handleAnimation = (parameters) => {
         heading.style.display = 'none'; 
         document.getElementById('lesson-menu').style.visibility = "visible";
         document.body.style.overflow = "auto";
-    }, 3500);
+    }, 3400);
 
 };
-
 
 // Loading function
 window.addEventListener('load', function() {
