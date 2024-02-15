@@ -83,15 +83,29 @@ html, body {
    visibility: hidden;
   }
 
+  .title1 {
+    text-align: center;
+    margin-top: -2vw;
+    position: relative;
+    width: 80%;
+    height: 15vh;
+    max-width: 100vw;
+    max-height: 50vh;
+    display: block;
+    margin-left: auto;
+    margin-right: 2vw;
+}
+
   .title {
     text-align: center;
-    margin-top: 15vw;
+    margin-top: -2vw;
     position: relative;
-    width: 80%; /* 20% of the viewport width */
-    height: 20vh; /* Automatically adjust height to maintain aspect ratio */
-    max-width: 100vw; /* Maximum width of 100% of the viewport width */
-    max-height: 50vh; /* Maximum height of 50% of the viewport height */
+    width: 80%;
+    height: 28vh;
+    max-width: 100vw;
+    max-height: 50vh;
     display: block;
     margin-left: auto;
     margin-right: auto;
+
 }
