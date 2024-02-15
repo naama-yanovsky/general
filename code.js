@@ -17,7 +17,7 @@ const handleAnimation = (parameters) => {
         heading.style.display = 'none'; 
         document.getElementById('lesson-menu').style.visibility = "visible";
         document.body.style.overflow = "auto";
-    }, 3400);
+    }, 2750);
 
 };
 
