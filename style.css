@@ -109,3 +109,34 @@ html, body {
     margin-right: auto;
 
 }
+
+.image-container {
+    position: relative;
+    text-align: center;
+}
+
+.image-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 11.5vw;
+}
+.info-div {
+    visibility: hidden;
+    width: 80%;
+    height: 80%;
+    background-color: white;
+    position: fixed;
+    top: 60%; /* Adjusted to be a little bit lower */
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999; /* Set a high z-index to ensure the div appears above other content */
+    overflow: auto; /* Add overflow:auto to allow scrolling if content exceeds dimensions */
+    border-radius: 10%; /* Rounded corners using percentage */
+    padding: 6vw; /* Added padding */
+    text-align: center; /* Center the text */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Change the font */
+    direction: rtl; /* Set text direction to right-to-left (Hebrew) */
+    font-size: 4.5vw; 
+}
