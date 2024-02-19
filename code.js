@@ -11,11 +11,13 @@ const lessonSummaries = [
     "שיעור 9: תוכן השיעור התשיעי כאן יכול להיות תיאור ארוך מאוד על תוכן השיעור התשיעי. זה יכול לכלול פרטים רבים על החומר שנלמד, המטרות של השיעור, תהליכי הלמידה המשמעותיים, ועוד ועוד. בנוסף, ניתן להכליל בתיאור זה גם דוגמאות מעשיות, סיפורים, או כל תוכן אחר שמתאים למטרות השיעור. זה יכול להיות אורך מסוים או מתוכנן להיות די רחב וכולל פרטים מקיפים על הנושאים המטופלים."
 ];
 var containers;
+let page =0;
 
 // Loading function
 window.addEventListener('load', function() {
     document.getElementById('full-screen').addEventListener('click', handleAnimation);
 });
+
 
 
 // Initial animation function
@@ -30,28 +32,40 @@ const handleAnimation = (parameters) => {
     logo2.style.animation = 'ani 4s ';
     var heading = document.getElementById('heading');
     heading.style.animation = 'ani 4s ';
-    
+     
     setTimeout(function() {
+        if(page==0){
         logo.style.display = 'none';
         logo2.style.display = 'none';
         heading.style.display = 'none'; 
-        document.getElementById('lesson-menu').style.visibility = "visible";
-        document.body.style.overflow = "auto";
-        // Get all image container elements
-        containers = document.querySelectorAll('.image-container');
-  
-// Loop through each container
-for (var i = 0; i < containers.length; i++) {
-    // Add event listener to each container
-    containers[i].addEventListener('click', moveToLesson);
-}  
+        menu();
+        page=1;
+        }
     }, 2750);
 };
 
+
+const menu = (event) => {
+    console.log("menu");
+    document.getElementById('info-div').style.visibility = "hidden";
+        document.body.style.overflow = "auto";
+        document.getElementById('lesson-menu').style.visibility = "visible";
+        document.getElementById('lesson-menu').style.display = "block";
+        containers = document.querySelectorAll('.image-container');
+    // Loop through each container
+   for (var i = 0; i < containers.length; i++) {
+ // Add event listener to each container
+ containers[i].addEventListener('click', moveToLesson);
+}  
+};
+
+
+
 // Define the function to be called on click
 const moveToLesson = (event) => {
-    document.getElementById('lesson-menu').style.visibility = "hidden";
+    document.getElementById('lesson-menu').style.display = "none";
     document.getElementById('info-div').style.visibility = "visible";
+    document.getElementById('back_btn').addEventListener('click', menu);
     // For example, you can navigate to a different page or perform some action
     const containerId = event.target.closest('.image-container').id;
     // Find the index of the clicked container in the containers array
@@ -61,9 +75,10 @@ const moveToLesson = (event) => {
     // Log the ID and lesson summary of the clicked container
     console.log("Clicked container ID:", containerId);
     console.log("Lesson Summary:", lessonSummary);
-
     
 };
+
+
 
 
 
