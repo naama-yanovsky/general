@@ -135,13 +135,13 @@ html, body {
     transform: translate(-50%, -50%);
     overflow: auto; /* Add overflow:auto to allow scrolling if content exceeds dimensions */
     border-radius: 10%; /* Rounded corners using percentage */
-    padding: 6vw; /* Added padding */
+    padding: 3vw; /* Added padding */
     /* text-align: center; Center the text */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Change the font */
     /* direction: rtl; Set text direction to right-to-left (Hebrew) */
     font-size: 20px;
     position: absolute;
-    top: 55vh;
+    top: 51vh;
     left: 50vw;
     font-weight: 3vw;
 }
