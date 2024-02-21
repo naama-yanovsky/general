@@ -1,115 +1,123 @@
-/* General styling for HTML and body */
 html, body {
     font-family: "Karantina", system-ui;
     width: 100%;
-    height: 100%;
+    height:100%;
     margin: 0;
     padding: 0;
     direction: rtl;
     color: rgb(0, 0, 0);
     background-image: url(orangeBackground.jpg);
-    background-size: cover; /* Ensure the background image covers the entire viewport */
-    overflow-x: hidden; /* Hide horizontal overflow */
+    background-size: 100% 100%;
+    overflow: hidden;
 }
 
-/* Heading style */
-.heading {
-    text-align: center;
-    font-size: 8vw; /* Adjusted font size for responsiveness */
+.heading{
+ text-align: center;
+ font-size: 8vh;
+ background-size: 100% 100%;
     color: rgb(0, 0, 0);
     font-weight: 800;
-    margin-top: 10vw; /* Adjusted margin top for responsiveness */
-    padding-top: 4vw; /* Adjusted padding top for responsiveness */
-    min-height: 8vw; /* Adjusted minimum height for responsiveness */
+    margin-top: 40vw;
+    font-size: 13vw;
+    height: 15vw;
+    width: 100vw;
+    padding-top: 8vw;
+    min-height: 11vw;
+    max-height: 11vw;
     position: absolute;
-    width: 100%;
 }
-
-/* Logo position on top right */
+/* CSS classes for positioning and sizing images */
 .top-right {
     position: absolute;
     top: 3vh;
     right: 3vw;
     width: 20%; /* 20% of the viewport width */
-    max-width: 100px; /* Maximum width of 100px */
+    height: auto; /* Automatically adjust height to maintain aspect ratio */
+    max-width: 100vw; /* Maximum width of 100% of the viewport width */
+    max-height: 50vh; /* Maximum height of 50% of the viewport height */
 }
 
-/* Logo position on top left */
 .top-left {
     position: absolute;
     top: 3vh;
     left: 3vw;
     width: 20%; /* 20% of the viewport width */
-    max-width: 100px; /* Maximum width of 100px */
+    height: auto; /* Automatically adjust height to maintain aspect ratio */
+    max-width: 100vw; /* Maximum width of 100% of the viewport width */
+    max-height: 50vh; /* Maximum height of 50% of the viewport height */
 }
 
-/* Hand image style */
 .hand {
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 8vh; /* Adjusted bottom position for responsiveness */
-    width: 30%; /* Adjusted width for responsiveness */
-    max-width: 150px; /* Maximum width of 150px */
+    bottom: 11vh;
+    max-width: 30%; /* Ensure image doesn't exceed viewport width */
+    max-height: 20vh; /* Ensure image doesn't exceed 80% of the viewport height */
 }
-
-/* Hand text style */
 .hand-text {
+
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    bottom: 6vh; /* Adjusted bottom position for responsiveness */
-    font-size: 5vw; /* Adjusted font size for responsiveness */
+    bottom: 9vh;
+    font-size: 5vw;
 }
 
-/* Lesson menu */
-.lesson-menu {
-    visibility: hidden;
-    background-color: #f19e36;
-    overflow: scroll;
-}
 
-/* Title1 class */
+@keyframes ani {
+    0%   {  top:0vh;}
+    50%  {  top:50vh;}
+    100% { top:-100vh;}
+  }
+
+  .lesson-menu{
+   visibility: hidden;
+   background-color: #f19e36;
+   overflow: scroll;
+  }
+
 .title1 {
     text-align: center;
+    margin-top: -2vw;
     position: relative;
     width: 80%;
-    height: auto; /* Auto height for responsiveness */
-    max-width: 100%; /* Maximum width of 100% */
-    max-height: 50vh; /* Maximum height of 50vh */
+    height: 15vh;
+    max-width: 100vw;
+    max-height: 50vh;
     display: block;
-    margin: 0 auto; /* Center align */
+    margin-left: auto;
+    margin-right: 2vw;
 }
 
-/* Title class */
-.title {
+  .title {
     text-align: center;
+    margin-top: -2vw;
     position: relative;
     width: 80%;
-    height: auto; /* Auto height for responsiveness */
-    max-width: 100%; /* Maximum width of 100% */
-    max-height: 50vh; /* Maximum height of 50vh */
+    height: 28vh;
+    max-width: 100vw;
+    max-height: 50vh;
     display: block;
-    margin: 0 auto; /* Center align */
+    margin-left: auto;
+    margin-right: auto;
+
 }
 
-/* Image container */
 .image-container {
     position: relative;
     text-align: center;
 }
 
-/* Image text */
 .image-text {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    font-size: 8vw; /* Adjusted font size for responsiveness */
+    font-size: 11.5vw;
 }
 
-/* Class screen */
-.class-screen {
+.class-screen{
     visibility: hidden;
     width: 100%;
     height: 100%;
@@ -118,31 +126,33 @@ html, body {
     position: absolute;
 }
 
-/* Info div */
+
 .info-div {
     width: 80%;
     height: 70%;
     background-color: white;
     transform: translate(-50%, -50%);
     overflow: auto; /* Add overflow:auto to allow scrolling if content exceeds dimensions */
-    border-radius: 10px; /* Adjusted border-radius for responsiveness */
-    padding: 3vw; /* Adjusted padding for responsiveness */
+    border-radius: 10%; /* Rounded corners using percentage */
+    padding: 3vw; /* Added padding */
+    /* text-align: center; Center the text */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Change the font */
-    font-size: 4vw; /* Adjusted font size for responsiveness */
+    /* direction: rtl; Set text direction to right-to-left (Hebrew) */
+    font-size: 20px;
     position: absolute;
-    top: 47%; /* Adjusted top position for responsiveness */
-    left: 50%; /* Adjusted left position for responsiveness */
-    transform: translate(-50%, -50%); /* Center the div horizontally and vertically */
-    font-weight: bold; /* Adjusted font weight for responsiveness */
+    top: 47vh;
+    left: 50vw;
+    font-weight: 3vw;
 }
 
-/* Arrow image */
-.arrow {
+
+.arrow{
     transform: rotateY(180deg);
-    position: absolute;
-    bottom: 1vw; /* Adjusted bottom position for responsiveness */
-    right: 5vw; /* Adjusted right position for responsiveness */
-    width: 15vw; /* Adjusted width for responsiveness */
-    max-width: 100px; /* Maximum width of 100px */
+    position: fixed;
+    bottom: 1vh;
+    right: 8vw;
+    width: 20vw;
+    height: auto;
+    max-width: 20vh;
     z-index: 9999;
 }
