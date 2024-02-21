@@ -9,7 +9,7 @@ html, body {
     color: rgb(0, 0, 0);
     background-image: url(orangeBackground.jpg);
     background-size: 100% 100%;
-    overflow: auto;
+    overflow: hidden;
 }
 
 .heading{
@@ -145,13 +145,16 @@ html, body {
     left: 50vw;
     font-weight: 3vw;
 }
+
+
 .arrow{
     transform: rotateY(180deg);
     position: fixed;
-    bottom: 8vh;
+    bottom: 4vh;
     right: 8vw;
     width: 20vw;
     height: auto;
     max-width: 20vh;
     z-index: 9999;
 }
+
