@@ -130,7 +130,7 @@ html, body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Change the font */
     font-size: 4vw; /* Adjusted font size for responsiveness */
     position: absolute;
-    top: 50%; /* Adjusted top position for responsiveness */
+    top: 47%; /* Adjusted top position for responsiveness */
     left: 50%; /* Adjusted left position for responsiveness */
     transform: translate(-50%, -50%); /* Center the div horizontally and vertically */
     font-weight: bold; /* Adjusted font weight for responsiveness */
@@ -140,7 +140,7 @@ html, body {
 .arrow {
     transform: rotateY(180deg);
     position: absolute;
-    bottom: 5vw; /* Adjusted bottom position for responsiveness */
+    bottom: 1vw; /* Adjusted bottom position for responsiveness */
     right: 5vw; /* Adjusted right position for responsiveness */
     width: 15vw; /* Adjusted width for responsiveness */
     max-width: 100px; /* Maximum width of 100px */
