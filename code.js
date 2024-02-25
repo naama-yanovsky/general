@@ -13,14 +13,18 @@ const lessonSummaries = [
 var containers;
 let page =0;
 
-// Loading function
+
+// Load function
 window.addEventListener('load', function() {
     document.getElementById('full-screen').addEventListener('click', handleAnimation);
+    
+    // Get the containers
+    containers = [];
+    for (var i = 1; i <= 9; i++) {
+        containers.push(document.getElementById('image-container-' + i));
+    }
 });
 
-
-
-// Initial animation function
 const handleAnimation = (parameters) => {
     var hand = document.getElementById('hand');
     hand.style.display = 'none';
@@ -45,46 +49,42 @@ const handleAnimation = (parameters) => {
     }, 2750);
 };
 
-
-const menu = (event) => {
+const menu = () => {
     console.log("Entering menu function...");
     document.getElementById('class-screen').style.visibility = "hidden";
     document.getElementById('lesson-menu').style.visibility = "visible";
     document.getElementById('lesson-menu').style.display = "block";
-    containers = document.querySelectorAll('.image-container');
-    // Loop through each container
-    for (var i = 1; i < containers.length; i++) {
-        // Add event listener to each container
-        containers[i].addEventListener('click', moveToLesson);
-    }  
+
+    // Remove existing event listeners from containers
+    containers.forEach(container => {
+        container.removeEventListener('click', moveToLesson);
+    });
+
+    // Add event listeners to containers
+    containers.forEach(container => {
+        container.addEventListener('click', moveToLesson);
+    });
 };
 
-
-
-
-// Define the function to be called on click
 const moveToLesson = (event) => {
     document.getElementById('lesson-menu').style.display = "none";
     document.getElementById('class-screen').style.visibility = "visible";
     document.getElementById('back_btn').addEventListener('click', menu);
-
-    // For example, you can navigate to a different page or perform some action
+    
+    // Get the lesson number from the clicked container's ID
     const containerId = event.target.closest('.image-container').id;
     const lessonNumber = parseInt(containerId.slice(16)); // Assuming the containerId starts with 'image-container-' and the lesson number comes after it
-    // Set the inner text to 'שיעור' followed by the lesson number
-    console.log(lessonNumber);
+
+    // Set the lesson number in the class screen
     document.getElementById('image-text').innerText = ' שיעור ' + lessonNumber;
+
     // Find the index of the clicked container in the containers array
-    const containerIndex = Array.from(containers).indexOf(event.target.closest('.image-container'));
+    const containerIndex = containers.findIndex(container => container.id === containerId);
+
     // Access the corresponding lesson summary from the array
-    const lessonSummary = lessonSummaries[containerIndex - 1];
+    const lessonSummary = lessonSummaries[containerIndex];
     console.log("Clicked container ID:", containerId);
     console.log("Lesson Summary:", lessonSummary);
     document.getElementById('info-div').innerText =  lessonSummary;
-
 };
-
-
-
-
 
