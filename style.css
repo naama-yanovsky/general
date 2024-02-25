@@ -30,7 +30,7 @@ html, body {
 .top-right {
     position: absolute;
     top: 3vh;
-    right: 3vw;
+    right: 4vw;
     width: 20%; /* 20% of the viewport width */
     height: auto; /* Automatically adjust height to maintain aspect ratio */
     max-width: 100vw; /* Maximum width of 100% of the viewport width */
